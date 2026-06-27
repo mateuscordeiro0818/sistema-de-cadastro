@@ -14,6 +14,23 @@ while True:
 
     elif escolha == '2':
         sistema.listar_clientes()
-        
+
     elif escolha == '3':
-        sistema.buscar_cliente()
+        Sistema.buscar_cliente()
+
+    elif escolha == '4':
+        Sistema.editar_cliente()
+
+    elif escolha == '5':
+        Sistema.excluir_cliente()
+
+    elif escolha == '6':
+        Sistema.salvar()
+
+    elif escolha == '7':
+        Sistema.carregar()
+        
+    elif escolha == '0':
+        print('Encerrado')
+        break
+
