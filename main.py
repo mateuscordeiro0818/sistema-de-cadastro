@@ -16,19 +16,19 @@ while True:
         sistema.listar_clientes()
 
     elif escolha == '3':
-        Sistema.buscar_cliente()
+        sistema.buscar_cliente()
 
     elif escolha == '4':
-        Sistema.editar_cliente()
+        sistema.editar_cliente()
 
     elif escolha == '5':
-        Sistema.excluir_cliente()
+        sistema.excluir_cliente()
 
     elif escolha == '6':
-        Sistema.salvar()
+        sistema.salvar()
 
     elif escolha == '7':
-        Sistema.carregar()
+        sistema.carregar()
         
     elif escolha == '0':
         print('Encerrado')

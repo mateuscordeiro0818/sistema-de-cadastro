@@ -31,8 +31,16 @@ class Sistema:
 
         
 
-    def buscar_cliente():
-        pass
+    def buscar_cliente(self):
+        found = input('Nome do cliente: ')
+        for cliente in self.clientes:
+            if found == cliente.nome:
+                print('Ele é nosso cliente')
+                break
+            else:
+                print('ele nao é nosso cliente')
+                break
+       
 
     def editar_cliente():
         pass
@@ -53,5 +61,12 @@ class Sistema:
             json.dump(lista_dict, arquivo)
         
 
-    def carregar():
-        pass
+    def carregar(self):
+        with open('clientes.json', 'r') as arquivo:
+            
+            dados = json.load(arquivo)
+            for cliente in dados:
+                novo_cliente = Cliente(
+                    cliente["nome"], cliente["idade"], cliente["email"], cliente["telefone"]
+                )
+                self.clientes.append(novo_cliente)
